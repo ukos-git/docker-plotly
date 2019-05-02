@@ -7,3 +7,4 @@ RUN apk add --no-cache \
 	jq \
 	py-pip
 RUN pip install plotly
+COPY plotly2html /usr/local/bin/
