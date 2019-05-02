@@ -18,4 +18,8 @@ if args.outputfile == None:
 with open(args.inputfile) as json_file:
         graph = json.load(json_file)
 
-py.plot(graph, include_plotlyjs=False, filename=args.outputfile, auto_open=False)
+try:
+    py.plot(graph, include_plotlyjs=False, filename=args.outputfile, auto_open=False)
+except:
+    print("[Error] Could not convert file: %s" % args.outputfile)
+    raise
