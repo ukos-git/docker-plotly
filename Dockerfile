@@ -9,6 +9,7 @@ RUN apk add --no-cache \
 	tar
 RUN pip install \
 	dash \
+	gunicorn \
 	plotly
 COPY plotly2html /usr/local/bin/
 
